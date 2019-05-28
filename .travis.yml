@@ -20,3 +20,16 @@ after_success:
   - docker push sort3d/multi-nginx
   - docker push sort3d/multi-server
   - docker push sort3d/multi-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-1
+  app: multi-docker
+  env: MultiDocker-env
+  bucket_name: elasticbeanstalk-us-east-1-302154339295
+  bucket_path: docker-multi
+  on:
+    branch: master
+  acccess_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
