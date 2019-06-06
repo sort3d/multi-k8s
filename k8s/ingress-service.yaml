@@ -9,9 +9,9 @@ metadata:
 spec:
   tls:
     - hosts: 
-      - tester.com
+      - *
   rules:
-    - host: tester.com
+    - host: *
       http:
         paths:
           - path: /?(.*)
