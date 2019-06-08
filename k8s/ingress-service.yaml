@@ -10,7 +10,7 @@ spec:
   tls:
     - hosts: 
       - tester.com
-      - production.com
+      - multi-k8s.intexcel.com
   rules:
     - host: tester.com
       http:
@@ -23,7 +23,7 @@ spec:
             backend:
               serviceName: server-cluster-ip-service
               servicePort: 5000
-    - host: production.com
+    - host: multi-k8s.intexcel.com
       http:
         paths:
           - path: /?(.*)
