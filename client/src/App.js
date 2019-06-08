@@ -17,7 +17,7 @@ function App() {
           </div>
           <img src={logo} className="App-logo" alt="logo" />
           <div>
-            <h2>Fibonacci Calculator Version 2</h2>
+            <h2>Fibonacci Calculator Version KUBERNETES!</h2>
           </div>
           <div>
             <Route exact path="/" component={Fib} />
